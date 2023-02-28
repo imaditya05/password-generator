@@ -225,7 +225,8 @@ input[type="range"].slider::-webkit-slider-runnable-track {
   background: hsl(290, 70%, 36%);
 }
 
-input[type="range"].slider::-webkit-slider-thumb:hover {
+input[type="range"].slider::-webkit-slider-thumb:hover,
+input[type="range"].slider::-webkit-slider-thumb:active {
   outline: 2px solid var(--vb-yellow);
   background-color: var(--dk-violet);
   box-shadow: 0px 0px 25px 5px rgba(255, 229, 61, 0.8);
@@ -233,10 +234,6 @@ input[type="range"].slider::-webkit-slider-thumb:hover {
 
 input[type="range"].slider:hover::-webkit-slider-runnable-track {
   background: hsl(290, 70%, 36%);
-}
-
-input[type="range"].slider::-webkit-slider-thumb:active {
-  background: hsl(52, 100%, 62%);
 }
 
 input[type="range"].slider:active::-webkit-slider-runnable-track {
