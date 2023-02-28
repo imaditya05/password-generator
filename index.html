@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="./favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Main Container  -->
+
+    <div class="container">
+      <h1 class="site-heading">Password Generator</h1>
+      <div class="display-password">
+        <input
+          type="text"
+          readonly
+          data-showpassword
+          class="displayPassword"
+          placeholder="Password"
+        />
+        <!-- Copy Password button  -->
+        <button class="copy-btn" data-copy>
+          <span data-copyMsg>
+            <img src="./assets/copy.svg" alt="copy" width="25" height="25" />
+          </span>
+        </button>
+
+        <p class="tooltip">Copied</p>
+      </div>
+
+      <!-- Password Configuration container  -->
+
+      <div class="passConfig-container">
+        <div class="password-length">
+          <p class="length-head">Password Length</p>
+          <p data-passwordLength>10</p>
+        </div>
+        <div class="input-range">
+          <input
+            type="range"
+            name="password-length"
+            min="1"
+            max="20"
+            class="slider slider-progress"
+            step="1"
+            value="10"
+            data-lengthSlider
+            oninput="sliderChange()"
+          />
+        </div>
+
+        <!-- Configure checkboxes  -->
+
+        <div class="checkboxes">
+          <div class="config-box">
+            <input type="checkbox" id="uppercase" />
+            <label for="uppercase">Includes Uppercase letters</label>
+          </div>
+
+          <div class="config-box">
+            <input type="checkbox" id="lowercase" />
+            <label for="lowercase">Includes Lowercase letters</label>
+          </div>
+
+          <div class="config-box">
+            <input type="checkbox" id="numbers" />
+            <label for="numbers">Includes Numbers </label>
+          </div>
+
+          <div class="config-box">
+            <input type="checkbox" id="symbols" />
+            <label for="symbols">Includes Symbols </label>
+          </div>
+
+          <!-- Divider  -->
+
+          <div class="divider"></div>
+          <!-- Strength section  -->
+          <div class="strength-container">
+            <p>Strength</p>
+            <div data-indicator></div>
+          </div>
+
+          <div class="generateBtnContainer">
+            <button class="generateBtn">Generate Password</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
